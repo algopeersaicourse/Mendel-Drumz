@@ -1,0 +1,6 @@
+{
+  "name": "MENDEL DRUMZ",
+  "description": "Personal drum learning platform to practice rhythms, explore lessons, master rudiments, and play interactive virtual drums.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

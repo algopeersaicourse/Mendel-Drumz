@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Syne', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0a0a0c;
+    color: #f3f4f6;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom scrollbar for dark studio theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111116;
+}
+::-webkit-scrollbar-thumb {
+  background: #2e2e38;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
+
+/* Glassmorphism studio card helpers */
+.studio-glass {
+  background: rgba(18, 18, 24, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.studio-glass-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.studio-glass-hover:hover {
+  background: rgba(26, 26, 36, 0.85);
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 0 15px -3px rgba(245, 158, 11, 0.15);
+}
+
+/* Realistic drum strike pulse */
+@keyframes drumPulse {
+  0% { transform: scale(0.96); filter: brightness(1.6); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
+.drum-hit-active {
+  animation: drumPulse 0.15s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
+}
